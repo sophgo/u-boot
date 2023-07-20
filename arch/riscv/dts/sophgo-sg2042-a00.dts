@@ -101,4 +101,32 @@
 			status = "okay";
 		};
 	};
+
+	gpio0: gpio@7030009000 {
+		compatible = "snps,dw-apb-gpio";
+        reg = <0x70 0x30009000 0x0 0x400>;
+        #address-cells = <1>;
+        #size-cells = <0>;
+  
+        port0a: gpio-controller@0 {
+        	compatible = "snps,dw-apb-gpio-port";
+        	bank-name = "port0a";
+        	gpio-controller;
+        	#gpio-cells = <2>;
+        	snps,nr-gpios = <32>;
+        	reg = <0>;
+        	interrupt-controller;
+        	#interrupt-cells = <2>;
+        	interrupt-parent = <&PLIC0>;
+        	interrupts = <SOC_PERIPHERAL_IRQ(96) IRQ_TYPE_LEVEL_HIGH>;
+        };
+	};
+
+	ethernet0: ethernet@7040026000 {
+		compatible = "snps,dwc-qos-ethernet-4.10";
+		reg = <0x70 0x40026000  0x0 0x4000>;
+		reg-names = "mac";
+		phy-mode = "rgmii-txid";
+		phy-reset-gpios = <&port0a 27 0>;
+	};
 };
