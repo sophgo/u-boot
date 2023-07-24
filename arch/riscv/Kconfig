@@ -31,6 +31,10 @@ config TARGET_SOPHGO_SG2042
 	bool "Support Sophgo SG2042 Board"
 	select SYS_CACHE_SHIFT_6
 
+config TARGET_SOPHGO_SG2260
+	bool "Support Sophgo SG2260 Board"
+	select SYS_CACHE_SHIFT_6
+
 config TARGET_SIPEED_MAIX
 	bool "Support Sipeed Maix Board"
 	select SYS_CACHE_SHIFT_6
@@ -71,6 +75,7 @@ source "board/microchip/mpfs_icicle/Kconfig"
 source "board/sifive/unleashed/Kconfig"
 source "board/sifive/unmatched/Kconfig"
 source "board/sophgo/sg2042/Kconfig"
+source "board/sophgo/sg2260/Kconfig"
 source "board/openpiton/riscv64/Kconfig"
 source "board/sipeed/maix/Kconfig"
 source "board/starfive/visionfive2/Kconfig"
