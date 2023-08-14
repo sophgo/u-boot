@@ -22,6 +22,7 @@ Shell commands
 
    cmd/acpi
    cmd/addrmap
+   cmd/armffa
    cmd/askenv
    cmd/base
    cmd/bdinfo
@@ -76,6 +77,7 @@ Shell commands
    cmd/md
    cmd/mmc
    cmd/mtest
+   cmd/mtrr
    cmd/panic
    cmd/part
    cmd/pause

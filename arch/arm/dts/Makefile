@@ -119,12 +119,15 @@ dtb-$(CONFIG_ROCKCHIP_RK3288) += \
 
 dtb-$(CONFIG_ROCKCHIP_RK3308) += \
 	rk3308-evb.dtb \
-	rk3308-roc-cc.dtb
+	rk3308-roc-cc.dtb \
+	rk3308-rock-pi-s.dtb
 
 dtb-$(CONFIG_ROCKCHIP_RK3328) += \
 	rk3328-evb.dtb \
 	rk3328-nanopi-r2c.dtb \
 	rk3328-nanopi-r2s.dtb \
+	rk3328-orangepi-r1-plus.dtb \
+	rk3328-orangepi-r1-plus-lts.dtb \
 	rk3328-roc-cc.dtb \
 	rk3328-rock64.dtb \
 	rk3328-rock-pi-e.dtb
@@ -159,6 +162,7 @@ dtb-$(CONFIG_ROCKCHIP_RK3399) += \
 	rk3399-roc-pc.dtb \
 	rk3399-roc-pc-mezzanine.dtb \
 	rk3399-rock-4c-plus.dtb \
+	rk3399-rock-4se.dtb \
 	rk3399-rock-pi-4a.dtb \
 	rk3399-rock-pi-4c.dtb \
 	rk3399-rock960.dtb \
@@ -167,13 +171,24 @@ dtb-$(CONFIG_ROCKCHIP_RK3399) += \
 
 dtb-$(CONFIG_ROCKCHIP_RK3568) += \
 	rk3566-anbernic-rgxx3.dtb \
+	rk3566-quartz64-a.dtb \
+	rk3566-quartz64-b.dtb \
 	rk3566-radxa-cm3-io.dtb \
+	rk3566-soquartz-blade.dtb \
+	rk3566-soquartz-cm4.dtb \
+	rk3566-soquartz-model-a.dtb \
 	rk3568-evb.dtb \
+	rk3568-nanopi-r5c.dtb \
+	rk3568-nanopi-r5s.dtb \
+	rk3568-odroid-m1.dtb \
+	rk3568-radxa-e25.dtb \
 	rk3568-rock-3a.dtb
 
 dtb-$(CONFIG_ROCKCHIP_RK3588) += \
 	rk3588-edgeble-neu6a-io.dtb \
+	rk3588-edgeble-neu6b-io.dtb \
 	rk3588-evb1-v10.dtb \
+	rk3588s-rock-5a.dtb \
 	rk3588-rock-5b.dtb
 
 dtb-$(CONFIG_ROCKCHIP_RV1108) += \
@@ -416,6 +431,9 @@ dtb-$(CONFIG_ARCH_VERSAL) += \
 	xilinx-versal-virt.dtb
 dtb-$(CONFIG_ARCH_VERSAL_NET) += \
 	versal-net-mini.dtb \
+	versal-net-mini-emmc.dtb \
+	versal-net-mini-ospi-single.dtb \
+	versal-net-mini-qspi-single.dtb \
 	xilinx-versal-net-virt.dtb
 dtb-$(CONFIG_ARCH_ZYNQMP_R5) += \
 	zynqmp-r5.dtb
@@ -1301,9 +1319,11 @@ dtb-$(CONFIG_SOC_K3_AM642) += k3-am642-evm.dtb \
 			      k3-am642-r5-sk.dtb
 
 dtb-$(CONFIG_SOC_K3_AM625) += k3-am625-sk.dtb \
-			      k3-am625-r5-sk.dtb
+			      k3-am625-r5-sk.dtb \
+			      k3-am625-verdin-wifi-dev.dtb \
+			      k3-am625-verdin-r5.dtb
 
-dtb-$(CONFIG_SOC_K3_AM625) += k3-am62a7-sk.dtb \
+dtb-$(CONFIG_SOC_K3_AM62A7) += k3-am62a7-sk.dtb \
 			      k3-am62a7-r5-sk.dtb
 
 dtb-$(CONFIG_ARCH_MEDIATEK) += \
@@ -1323,6 +1343,8 @@ dtb-$(CONFIG_ARCH_MEDIATEK) += \
 	mt7986b-sd-rfb.dtb \
 	mt7986a-emmc-rfb.dtb \
 	mt7986b-emmc-rfb.dtb \
+	mt7988-rfb.dtb \
+	mt7988-sd-rfb.dtb \
 	mt8183-pumpkin.dtb \
 	mt8512-bm1-emmc.dtb \
 	mt8516-pumpkin.dtb \

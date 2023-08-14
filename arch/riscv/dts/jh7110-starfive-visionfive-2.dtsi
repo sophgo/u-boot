@@ -7,6 +7,7 @@
 
 #include "jh7110.dtsi"
 #include <dt-bindings/pinctrl/pinctrl-starfive-jh7110.h>
+#include <dt-bindings/gpio/gpio.h>
 / {
 	aliases {
 		serial0 = &uart0;
@@ -308,14 +309,24 @@
 	};
 };
 
+&pcie0 {
+	reset-gpios = <&sysgpio 26 GPIO_ACTIVE_LOW>;
+	status = "okay";
+};
+
+&pcie1 {
+	reset-gpios = <&sysgpio 28 GPIO_ACTIVE_LOW>;
+	status = "okay";
+};
+
 &syscrg {
 	assigned-clocks = <&syscrg JH7110_SYSCLK_CPU_ROOT>,
 			  <&syscrg JH7110_SYSCLK_BUS_ROOT>,
 			  <&syscrg JH7110_SYSCLK_PERH_ROOT>,
 			  <&syscrg JH7110_SYSCLK_QSPI_REF>;
-	assigned-clock-parents = <&syscrg JH7110_SYSCLK_PLL0_OUT>,
-				 <&syscrg JH7110_SYSCLK_PLL2_OUT>,
-				 <&syscrg JH7110_SYSCLK_PLL2_OUT>,
+	assigned-clock-parents = <&pllclk JH7110_SYSCLK_PLL0_OUT>,
+				 <&pllclk JH7110_SYSCLK_PLL2_OUT>,
+				 <&pllclk JH7110_SYSCLK_PLL2_OUT>,
 				 <&syscrg JH7110_SYSCLK_QSPI_REF_SRC>;
 	assigned-clock-rates = <0>, <0>, <0>, <0>;
 };
